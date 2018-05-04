@@ -1,0 +1,6 @@
+# This is a small test Dockerfile that will build CentOS
+FROM centos:latest
+LABEL maintainer="mridao@gmail.com"
+
+RUN yum update -y
+RUN yum install -y telnet elinks
