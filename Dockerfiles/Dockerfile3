@@ -1,0 +1,15 @@
+FROM centos:6
+
+LABEL maintainer="latest@linuxacademy.com"
+
+RUN yum update -y && yum -y install httpd net-tools
+RUN mkdir -p /run/httpd
+RUN rm -rf /run/http/* /tmp/httpd*
+
+CMD echo "Remember to check your container IP Address"
+
+ENV ENVIRONMENT="production"
+
+EXPOSE 80
+
+ENTRYPOINT apachectl "-DFOREGROUND"

@@ -1,0 +1,5 @@
+# This is a small Dockerfile
+FROM ubuntu:latest
+LABEL maintainer="mridao2@gmail.com"
+
+RUN apt-get update -y
